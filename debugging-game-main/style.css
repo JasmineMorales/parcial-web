@@ -9,7 +9,7 @@ html {
 }
 
 h1 {
-  @apply font-bold text-4xl mb-6;
+  @apply font-bold text-4xl mb-3;
 }
 
 .app {
@@ -51,9 +51,18 @@ h1 {
   opacity: 1;
 }
 
-#start {
-  @apply rounded-full py-3 px-6 my-2 mx-auto inline-block;
-  @apply border-pink-500 border-2;
-
+.data{
+  @apply text-left px-5 flex flex-col;
+  @apply rounded-lg my-2;  
   max-width: 400px;
+}
+
+#start {
+  @apply rounded-lg py-3 px-6 my-2 mx-auto inline-block;
+  @apply border-yellow-600 border-2;
+  max-width: 400px;
+}
+
+#start:hover{
+  background-color: rgba(217, 119, 6, 0.4);
 }

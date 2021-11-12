@@ -55,6 +55,7 @@ function golpear(event) {
 }
 
 function iniciarJuego() {
+  console.log("hola");
   scoreBoard.textContent = 0;
   timeUp = false;
 
@@ -68,7 +69,8 @@ function iniciarJuego() {
 const holesList = Array.from(holes)
 holesList.forEach(hole => {
     hole.addEventListener('click', golpear, {captured:true})
-    console.log("click");
 });
 
 // 5. Hacer un bind del evento click del boton iniciar juego
+const play = document.getElementById('start');
+play.onclick = function() { iniciarJuego(); return false; }

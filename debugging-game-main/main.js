@@ -61,14 +61,17 @@ function iniciarJuego() {
 
   saltar();
 
-  setTimeout(() => timeUp = true, 10 * 1000);
+  setTimeout(() => {
+    window.alert("¡Fin del juego!")
+    return timeUp = true;
+  }, 10 * 1000);
 }
 
 
 // 4. Agregar el evento 'click' al todos los elementos 'bug'
-const holesList = Array.from(holes)
-holesList.forEach(hole => {
-    hole.addEventListener('click', golpear, {captured:true})
+const bugsList = Array.from(bugs)
+bugsList.forEach(bug => {
+    bug.addEventListener('click', golpear, {captured:true})
 });
 
 // 5. Hacer un bind del evento click del boton iniciar juego

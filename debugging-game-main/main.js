@@ -65,6 +65,10 @@ function iniciarJuego() {
 
 
 // 4. Agregar el evento 'click' al todos los elementos 'bug'
-
+const holesList = Array.from(holes)
+holesList.forEach(hole => {
+    hole.addEventListener('click', golpear, {captured:true})
+    console.log("click");
+});
 
 // 5. Hacer un bind del evento click del boton iniciar juego
